@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LogingViewController.h"
+#import "myViewController.h"
+#import "workbenchViewController.h"
+#import "homeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,47 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    LogingViewController *yindao=[[LogingViewController alloc] init];
+//    UINavigationController *nav1= [[UINavigationController alloc] initWithRootViewController:yindao];
+//    self.window.rootViewController=nav1;
+    
+    
+    homeViewController *shouye=[[homeViewController alloc] init];
+    
+    workbenchViewController *huDong=[[workbenchViewController alloc] init];
+    
+    myViewController *youJi=[[myViewController alloc] init];
+    
+   
+    
+    UINavigationController *nav1= [[UINavigationController alloc] initWithRootViewController:shouye];
+    UINavigationController *nav2= [[UINavigationController alloc] initWithRootViewController:huDong];
+    UINavigationController *nav3= [[UINavigationController alloc] initWithRootViewController:youJi];
+    
+    nav1.title=@"首页";
+    nav2.title=@"工作台";
+    nav3.title=@"我的";
+    
+    [nav1.tabBarItem setSelectedImage:[UIImage imageNamed:@"首页1"]];
+    [nav1.tabBarItem setImage:[UIImage imageNamed:@"首页"]];
+    
+    [nav2.tabBarItem setSelectedImage:[UIImage imageNamed:@"工作台1"]];
+    [nav2.tabBarItem setImage:[UIImage imageNamed:@"工作台"]];
+    
+    [nav3.tabBarItem setSelectedImage:[UIImage imageNamed:@"我的1"]];
+    [nav3.tabBarItem setImage:[UIImage imageNamed:@"我的"]];
+    
+    [[UITabBar appearance] setTintColor:_backgroundColor];
+    
+    UITabBarController *bar=[[UITabBarController alloc] init];
+    bar.viewControllers=@[nav1,nav2,nav3];
+    
+    self.window.rootViewController=bar;
+    [self.window makeKeyAndVisible];
+    
+
     return YES;
 }
 
