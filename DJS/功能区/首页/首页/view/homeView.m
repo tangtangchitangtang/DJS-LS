@@ -8,7 +8,7 @@
 
 #import "homeView.h"
 #import "informationViewController.h"
-
+#import "LawListViewController.h"
 @implementation homeView
 
 -(void)creatView{
@@ -198,6 +198,11 @@
                 make.height.mas_equalTo(60);
             }];
             
+            beiJingView.userInteractionEnabled=YES;
+            beiJingView.tag=index;
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectZhuangTai:)];
+            [beiJingView addGestureRecognizer:tapGesture];
+            
             UIImageView *image=[UIImageView new];
             [beiJingView addSubview:image];
             [image mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -237,7 +242,10 @@
     }];
     xianView2.backgroundColor=_LightGrey;
 }
-
+-(void)selectZhuangTai:(UITapGestureRecognizer *)tap{
+    LawListViewController *lawList=[[LawListViewController alloc] init];
+    [ZQTools pushNextViewController:self.viewController andRootController:lawList];
+}
 -(void)pushToInformation:(UITapGestureRecognizer *)tap{
     informationViewController *information=[[informationViewController alloc] init];
     [ZQTools pushNextViewController:self.viewController andRootController:information];

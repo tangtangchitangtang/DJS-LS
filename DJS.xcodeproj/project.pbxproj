@@ -206,6 +206,9 @@
 		990457F11FFF175600F878C7 /* informationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 990457F01FFF175600F878C7 /* informationTableViewCell.m */; };
 		990457F71FFF1F7A00F878C7 /* detailsConsultationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990457F61FFF1F7A00F878C7 /* detailsConsultationView.m */; };
 		990457FA1FFF1F9400F878C7 /* detailsConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990457F91FFF1F9400F878C7 /* detailsConsultationViewController.m */; };
+		990458421FFF6CB100F878C7 /* LawListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990458411FFF6CB100F878C7 /* LawListViewController.m */; };
+		990458451FFF6CF100F878C7 /* LawListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 990458441FFF6CF100F878C7 /* LawListView.m */; };
+		990458481FFF742100F878C7 /* LawListViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 990458471FFF742100F878C7 /* LawListViewTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -594,6 +597,12 @@
 		990457F61FFF1F7A00F878C7 /* detailsConsultationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = detailsConsultationView.m; sourceTree = "<group>"; };
 		990457F81FFF1F9400F878C7 /* detailsConsultationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = detailsConsultationViewController.h; sourceTree = "<group>"; };
 		990457F91FFF1F9400F878C7 /* detailsConsultationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = detailsConsultationViewController.m; sourceTree = "<group>"; };
+		990458401FFF6CB100F878C7 /* LawListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LawListViewController.h; sourceTree = "<group>"; };
+		990458411FFF6CB100F878C7 /* LawListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LawListViewController.m; sourceTree = "<group>"; };
+		990458431FFF6CF100F878C7 /* LawListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LawListView.h; sourceTree = "<group>"; };
+		990458441FFF6CF100F878C7 /* LawListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LawListView.m; sourceTree = "<group>"; };
+		990458461FFF742100F878C7 /* LawListViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LawListViewTableViewCell.h; sourceTree = "<group>"; };
+		990458471FFF742100F878C7 /* LawListViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LawListViewTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -651,6 +660,7 @@
 		040D562B1FF200960015D371 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				9904583D1FFF6C6500F878C7 /* 法律咨询列表 */,
 				990457F21FFF1F1B00F878C7 /* 咨询详情 */,
 				040D56821FF49A5E0015D371 /* 资讯 */,
 				040D562E1FF20DEA0015D371 /* 首页 */,
@@ -1603,6 +1613,35 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
+		9904583D1FFF6C6500F878C7 /* 法律咨询列表 */ = {
+			isa = PBXGroup;
+			children = (
+				9904583F1FFF6C7D00F878C7 /* controller */,
+				9904583E1FFF6C7900F878C7 /* view */,
+			);
+			path = "法律咨询列表";
+			sourceTree = "<group>";
+		};
+		9904583E1FFF6C7900F878C7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				990458431FFF6CF100F878C7 /* LawListView.h */,
+				990458441FFF6CF100F878C7 /* LawListView.m */,
+				990458461FFF742100F878C7 /* LawListViewTableViewCell.h */,
+				990458471FFF742100F878C7 /* LawListViewTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9904583F1FFF6C7D00F878C7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				990458401FFF6CB100F878C7 /* LawListViewController.h */,
+				990458411FFF6CB100F878C7 /* LawListViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1837,6 +1876,7 @@
 				047899721FF0A20400C03F5E /* NSObject+MJKeyValue.m in Sources */,
 				04789A781FF0A2F000C03F5E /* BaseTableViewCell.m in Sources */,
 				047893741FF0A03400C03F5E /* UIImage+MultiFormat.m in Sources */,
+				990458481FFF742100F878C7 /* LawListViewTableViewCell.m in Sources */,
 				040D56881FF4A0BA0015D371 /* informationViewController.m in Sources */,
 				04789A7F1FF0ADE200C03F5E /* LogingViewController.m in Sources */,
 				047899551FF0A1E200C03F5E /* MJRefreshAutoFooter.m in Sources */,
@@ -1907,9 +1947,11 @@
 				047898FE1FF0A15B00C03F5E /* MBProgressHUD.m in Sources */,
 				04789A741FF0A2F000C03F5E /* BaseAlertController.m in Sources */,
 				04789A201FF0A22F00C03F5E /* UIImage+ACGif.m in Sources */,
+				990458421FFF6CB100F878C7 /* LawListViewController.m in Sources */,
 				04789A2B1FF0A22F00C03F5E /* NSBundle+TZImagePicker.m in Sources */,
 				04789A751FF0A2F000C03F5E /* BaseTabBarView.m in Sources */,
 				047899F91FF0A22F00C03F5E /* MWTapDetectingImageView.m in Sources */,
+				990458451FFF6CF100F878C7 /* LawListView.m in Sources */,
 				047892BF1FF09E2800C03F5E /* AppDelegate.m in Sources */,
 				04789A231FF0A22F00C03F5E /* UIViewController+ACMediaExt.m in Sources */,
 				0478937C1FF0A03400C03F5E /* UIButton+WebCache.m in Sources */,

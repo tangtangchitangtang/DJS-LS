@@ -24,7 +24,7 @@
         make.left.right.top.bottom.mas_equalTo(0);
     }];
     _aView.viewController=self;
-    
+    [_aView creatView];
     
 }
 -(void)viewWillAppear:(BOOL)animated{
